@@ -34,11 +34,12 @@
       transition: opacity 0.3s ease-in-out;
     }
     img {
-      display: none;
+      display: blockcom;
       height:  250px;
       width:  250px;
     }
     .text {
+      display: block;
       position: absolute;
       bottom: 0px;
       left: 0;
@@ -68,14 +69,16 @@
     }
   </style>
   <script type="text/javascript">
-    function updateWithNewTrack(title, artist, album, composer, genre, trackNum, paused, stopped, artURL, year) {
+    function updateWithNewTrack(trackDictionary, paused, stopped) {
       var container = document.getElementById('container');
       var visible = 0.95;
 
-      document.getElementById('track-title').textContent = title;
-      document.getElementById('artist').textContent = artist;
-      document.getElementById('album').textContent = album;
+      document.getElementById('track-title').textContent = trackDictionary.title;
+      document.getElementById('artist')textContent = trackDictionary.artist;
+      document.getElementById('album').textContent = trackDictionary.album;
+
       var art = document.getElementById('art');
+
       art.onload = function () {
         var x = art.naturalWidth;
         var y = art.naturalHeight;
@@ -87,11 +90,12 @@
         art.width = x * ratio;
         art.height = y * ratio;
       }
-      art.src = artURL;
-      if (artURL && artURL.length > 0)
+      art.src = trackDictionary.artPath;
+      if (trackDictionary.artPath && trackDictionary.artPath.length > 0)
         art.style.display = 'block';
       else
         art.style.display = 'none';
+
       if (!stopped) {
         container.style.opacity = visible;
       }

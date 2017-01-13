@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.gaetansorin.minimal</string>
+	<string>com.gaetansorin.minimalV2</string>
 	<key>ThemeName</key>
-	<string>Minimal</string>
+	<string>Minimal V2</string>
 	<key>SwinsianThemeVersion</key>
 	<integer>2</integer>
 </dict>
