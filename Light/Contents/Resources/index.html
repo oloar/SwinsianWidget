@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Desktop Window</title>
+  <style type="text/css">
+      body {
+      background-color: transparent;
+      height: 100%;
+      width: 100%;
+      text-align:center;
+      font-size: 14px;
+    }
+    * {
+      box-sizing: border-box;
+      font-family:  -apple-system, "Helvetica Neue", "Helvetica";
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      color: rgba(53, 53, 53, 1.0);
+      text-shadow: 0px 1px 2px rgba(3, 3, 3, 0.1);
+      padding: 0 0;
+    }
+    .container {
+      position: relative;
+      width: 250px;
+      height: 250px;
+      margin: 0 auto;
+      padding: 0 0;
+      border-radius: 0.3rem;
+      overflow: hidden;
+      box-shadow: 0px 15px 10px -5px rgba(0, 0, 0, 0.4);
+      opacity: 0;
+      -webkit-transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
+    }
+    img {
+      display: none;
+      height:  250px;
+      width:  250px;
+    }
+    .text {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      max-height: 80px;
+      min-height: 3em;
+      padding: 0.5em;
+      text-align: center;
+      background-color: rgba(250,250,250,0.9);
+
+    }
+    h2,h3 {
+      display: block;
+      padding: 0;
+      margin: 0;
+    }
+    .track-title {
+      font-size: 0.9em;
+      font-weight: 600;
+    }
+    .album {
+      font-size: 0.8em;
+      font-weight: 300;
+    }
+    .artist {
+      font-size: 0.8em;
+      font-weight: 100;
+    }
+  </style>
+  <script type="text/javascript">
+    function updateWithNewTrack(title, artist, album, composer, genre, trackNum, paused, stopped, artURL, year) {
+      var container = document.getElementById('container');
+      var visible = 0.95;
+
+      document.getElementById('track-title').textContent = title;
+      document.getElementById('artist').textContent = artist;
+      document.getElementById('album').textContent = album;
+      var art = document.getElementById('art');
+      art.onload = function () {
+        var x = art.naturalWidth;
+        var y = art.naturalHeight;
+        var ratio = 1.0;
+        if (x > 250.0)
+          ratio = 250.0 / x;
+        if ((y * ratio) > 250.0)
+          ratio = 250.0 / y;
+        art.width = x * ratio;
+        art.height = y * ratio;
+      }
+      art.src = artURL;
+      if (artURL && artURL.length > 0)
+        art.style.display = 'block';
+      else
+        art.style.display = 'none';
+      if (!stopped) {
+        container.style.opacity = visible;
+      }
+      else {
+        container.style.opacity = 0;
+      }
+    };
+    function windowSize() {
+      var size = [];
+      height = 280;
+      width = 280;
+      size[0] = height;
+      size[1] = width;
+      return size;
+    }
+  </script>
+</head>
+<body>
+  <div id="container" class="container">
+    <img id="art" src="null" alt="" />
+    <div class="text">
+      <h2 id="track-title" class="track-title"></h2>
+      <h3 id="album" class="album"></h3>
+      <h3 id="artist" class="artist"></h3>
+    </div>
+  </div>
+</body>
+</html>
