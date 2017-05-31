@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.gaetansorin.minimal.Dark</string>
+	<string>com.oloar.minimal.Dark</string>
 	<key>ThemeName</key>
 	<string>Minimal Dark</string>
 	<key>SwinsianThemeVersion</key>
