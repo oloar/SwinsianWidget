@@ -1,7 +1,13 @@
-# Minimaltheme
+# MinimalTheme
 
-Simple Swinsian desktop widget.
+Widget for the [Swinsian app.](https://swinsian.com)
 
-![Screenshot](./screenshot.jpg)
+### Installation
+* Download the [latest release](https://github.com/Oloar/Minimaltheme/releases/latest)
+* Decompress it in your application configuration folder at `~/Library/Application Support/Swinsian/Themes/`
 
-[The Swinsian app.](https://swinsian.com)
+### Themes
+#### Light
+![Light Theme](./Light/light_theme.png)
+#### Dark
+![Light Theme](./Dark/dark_theme.png)
