@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>com.oloars.minimal</string>
+	<key>ThemeName</key>
+	<string>Minimal</string>
+	<key>SwinsianThemeVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
