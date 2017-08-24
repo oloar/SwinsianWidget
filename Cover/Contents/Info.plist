@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.oloars.minimal</string>
+	<string>com.oloars.Cover</string>
 	<key>ThemeName</key>
-	<string>Minimal</string>
+	<string>Minimal Cover</string>
 	<key>SwinsianThemeVersion</key>
 	<integer>1</integer>
 </dict>
