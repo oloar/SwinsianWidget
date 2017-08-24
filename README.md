@@ -8,6 +8,9 @@ Widget for the [Swinsian app.](https://swinsian.com)
 
 ### Themes
 #### Light
-![Light Theme](./Light/light_theme.jpg)
+![Light Theme](./Light/light.jpg)
 #### Dark
-![Light Theme](./Dark/dark_theme.jpg)
+![Dark Theme](./Dark/dark.jpg)
+#### Cover only
+![Cover only](./noText/noText.jpg)
+
