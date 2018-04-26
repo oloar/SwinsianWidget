@@ -12,5 +12,5 @@ Widget for the [Swinsian app.](https://swinsian.com)
 #### Dark
 ![Dark Theme](./Dark/dark.jpg)
 #### Cover only
-![Cover](./Cover/cover.jpg)
+![Cover](./Cover/Cover.jpg)
 
